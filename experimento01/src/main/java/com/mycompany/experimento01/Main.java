@@ -6,7 +6,11 @@ import static spark.Spark.get;
  * @author Gaston
  */
 public class Main {
-    //consulta -> http://localhost:4567/getImg
-       
-    get("/getImg",Controlador.getImg); 
+    
+    public static void main(String[] args){
+        //consulta -> http://localhost:4567/getImg
+
+        get("/getImg",Controlador.getImg);
+    }
+     
 }

@@ -13,6 +13,6 @@ public class UrlDAO {
         urls.add("imagen02");
     }
     public String getUrl(int i){
-        return urls.get(i);
+        return urls.get(i%urls.size()); // en caso que supere el size de la lista vuelve a indexar
     }
 }

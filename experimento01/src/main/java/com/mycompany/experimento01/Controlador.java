@@ -12,22 +12,17 @@ import spark.template.velocity.VelocityTemplateEngine;
  * @author Gaston
  */
 public class Controlador {
-    public static Route getList = (Request req, Response res) -> {
+    public static Route getImg = (Request req, Response res) -> {
                 
-        String indice = req.queryParams("indice");
-        
-        if(indice != null){
-        
-        }
-            
+        Integer indice = (req.queryParams("indice") ==  null) ? null : Integer.parseInt(req.queryParams("indice"));
         
         UrlDAO urlDAO = new UrlDAO();
-        
-
-                
+               
         HashMap model = new HashMap();
-        model.put("lista", url);
+        model.put("imagen", urlDAO.getUrl(indice));
         model.put("template", "templates/center.vsl");
+        
+        //Deberia retornar una porcion de HTMl para que Ajax lo reciba e inserte en en documento.
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout.vsl")); 
     };
 }
