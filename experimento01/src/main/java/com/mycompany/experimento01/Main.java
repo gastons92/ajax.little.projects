@@ -15,6 +15,8 @@ public class Main {
         staticFiles.location("/public");
 
         get("/getImg",Controlador.getImg);
+        get("/index",Controlador.index);
+        get("/getTest",Controlador.getTest);
     }
      
 }

@@ -1,5 +1,14 @@
-<div class="row justify-content-center">
-    <div class="col-8">
-        <img src="$imagen" class="img-fluid" alt="Responsive image">
+#if ($imagen == "" )
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h5>Sin imagen</h5>
+        </div>
     </div>
-</div>
+#else
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <img src="$imagen" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+#end 
+
