@@ -15,7 +15,7 @@
         <label for="index">ingresar index</label>
     </div>
     <a id="botonver" class="waves-effect waves-light btn">Ver</a>
-
+    <div id="consulta"></div>
     <div id="contenedorimagen"></div>
     
     
@@ -29,10 +29,14 @@
             $("#botonver").click(function(){
                 //hacer  consulta Ajax
                 var consulta = "http://localhost:4567/getImg?indice="+$("#index").val();
+
+                $("#consulta").html("la consulta es:  "+consulta);
+
                 $.get(consulta, function(answer){
                     //insertar codigo obtenido
                     $("#contenedorimagen").html(answer);
                 });
+               
             });
         });
     </script>
