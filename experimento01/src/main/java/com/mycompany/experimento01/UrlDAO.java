@@ -9,8 +9,8 @@ public class UrlDAO {
     
     public UrlDAO(){
         urls = new ArrayList<String>();
-        urls.add("imagen01");
-        urls.add("imagen02");
+        urls.add("imagen01.jpg");
+        urls.add("imagen02.jpg");
     }
     public String getUrl(int i){
         return urls.get(i%urls.size()); // en caso que supere el size de la lista vuelve a indexar
