@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Materialize.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Prueba Ajax</title>
+</head>
+<body>
+    
+    <div class="input-field col s12">
+        <input id="index" type="text" class="validate">
+        <label for="index">ingresar index</label>
+    </div>
+    <a id="botonver" class="waves-effect waves-light btn">Ver</a>
+
+    <div id="contenedorimagen"></div>
+    
+    
+    <!--JQuery-->
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <!--Materialize.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#botonver").click(function(){
+                //hacer  consulta Ajax
+                var consulta = "http://localhost:4567/getImg?indice="+$("#index").val();
+                $.get(consulta, function(answer){
+                    //insertar codigo obtenido
+                    $("#contenedorimagen").html(answer);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
