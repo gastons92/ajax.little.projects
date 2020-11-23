@@ -17,6 +17,9 @@ public class Main {
         get("/getImg",Controlador.getImg);
         get("/index",Controlador.index);
         get("/getTest",Controlador.getTest);
+        //index con ajax
+        get("/index2",Controlador.index2);
+        get("/contenedorImg",Controlador.contenedorImg);
     }
      
 }

@@ -1,0 +1,25 @@
+<!DOCKTYPE html>
+<html>
+<head>
+    <title> Personas </title>
+    <!-- Usa Framework Boostrap en linea -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body>
+
+      <div class="form-group">
+        <label for="indice">Ingresar indice de imagen</label>
+        <input type="text" class="form-control" id="indice">
+      </div>
+      <button id="btnver" type="submit" class="btn btn-primary">Ver</button>
+    <div id="consulta"></div>
+    <div id="contenedorimagen"></div>
+    
+    <!--  SCRIPTS  -->
+    <!--JQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--myscript-->
+    <script src="myscript.js"></script>
+</body>
+</html>

@@ -17,6 +17,7 @@ public class Controlador {
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout.vsl")); 
     };
     
+    
     public static Route getImg = (Request req, Response res) -> {
                 
         UrlDAO urlDAO = new UrlDAO();
@@ -56,5 +57,24 @@ public class Controlador {
         //Deberia retornar una porcion de HTMl para que Ajax lo reciba e inserte en en documento.
         //porcion de HTML = div centrado
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/container.vsl")); 
+    };
+    
+    //PARA LAYOUT2
+    public static Route index2 = (Request req, Response res) -> {
+        HashMap model = new HashMap();
+        
+        return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout2.vsl")); 
+    };
+    public static Route contenedorImg = (Request req, Response res) -> {
+        UrlDAO urlDAO = new UrlDAO();
+        HashMap model = new HashMap();
+        String urlImagen = "";
+        
+        if(req.queryParams("indice") != null)
+            urlImagen = urlDAO.getUrl(Integer.parseInt(req.queryParams("indice")));
+        
+        model.put("imagen", urlImagen);
+        
+        return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/center.vsl")); 
     };
 }
