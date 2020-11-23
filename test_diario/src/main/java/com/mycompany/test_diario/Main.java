@@ -13,6 +13,7 @@ public class Main {
         staticFiles.location("/public");
 
         get("/index",Controlador.index);
-        get("/getNoticias",Controlador.getNoticias);
+        get("/getNoticias1",Controlador.getNoticias1);
+        get("/getNoticias2",Controlador.getNoticias2);
     }
 }

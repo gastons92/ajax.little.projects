@@ -24,7 +24,7 @@ public class NoticiaDAO {
             noticias.add(n1);
             
             Noticia n2 = new Noticia("Macri asegura: yo no soy un gato","imagen02.jpg");
-            n2.setDesc("Cito luego de presentar una muestra de adn que parece indicar presencia de genes umanos en sangre");
+            n2.setDesc("Cito luego de presentar una muestra de adn que parece indicar presencia de genes humanos en sangre");
             noticias.add(n2);
             
             Noticia n3 = new Noticia("Alberto ratifica: me aseguro que tenia 18","imagen03.jpg");

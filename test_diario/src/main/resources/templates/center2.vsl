@@ -1,0 +1,24 @@
+#if ($noticias.size() == 0)
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h5>No hay noticias</h5>
+        </div>
+    </div>
+#else
+    <div class="no-gutters" style="display: flex; justify-content: space-between; width: 90%; flex-wrap: wrap; margin: 2% auto;">
+    #foreach( $n in $noticias ) 
+
+        <!--div class="row justify-content-center"-->
+            <div class="card my-3 col-5">
+                <img src="$n.getUrl()" class="card-img-top" alt="Noticia">
+                <div class="card-body">
+                    <h5 class="card-title">$n.getTit()</h5>
+                    <p class="card-text">$n.getDesc()</p>
+                </div>
+            </div>
+        <!--/div-->
+    
+    #end
+    </div>
+#end 
+

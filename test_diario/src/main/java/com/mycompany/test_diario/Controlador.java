@@ -15,10 +15,11 @@ public class Controlador {
     public static Route index = (Request req, Response res) -> {
         HashMap model = new HashMap();
         
+        model.put("nav_bar", "templates/nav_bar.vsl");
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/layout.vsl")); 
     };
     
-    public static Route getNoticias = (Request req, Response res) -> {
+    public static Route getNoticias1 = (Request req, Response res) -> {
         NoticiaDAO nDAO = new NoticiaDAO();
         List<Noticia> noticias = nDAO.getNoticias();
         
@@ -27,6 +28,17 @@ public class Controlador {
         model.put("noticias", noticias);
         
         return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/center.vsl")); 
+    };
+    
+    public static Route getNoticias2 = (Request req, Response res) -> {
+        NoticiaDAO nDAO = new NoticiaDAO();
+        List<Noticia> noticias = nDAO.getNoticias();
+        
+        HashMap model = new HashMap();
+        
+        model.put("noticias", noticias);
+        
+        return new VelocityTemplateEngine().render(new ModelAndView(model, "templates/center2.vsl")); 
     };
     
 }
