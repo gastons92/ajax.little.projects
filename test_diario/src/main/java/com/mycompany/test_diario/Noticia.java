@@ -1,5 +1,6 @@
 package com.mycompany.test_diario;
 import lombok.Data;
+
 /**
  *
  * @author Gaston

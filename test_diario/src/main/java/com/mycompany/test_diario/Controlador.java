@@ -7,10 +7,12 @@ import spark.Route;
 import java.util.HashMap; 
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
+
 /**
  *
  * @author Gaston
  */
+
 public class Controlador {
     public static Route index = (Request req, Response res) -> {
         HashMap model = new HashMap();

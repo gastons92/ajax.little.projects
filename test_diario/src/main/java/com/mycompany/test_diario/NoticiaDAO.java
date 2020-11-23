@@ -3,10 +3,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import lombok.Data;
+
 /**
  *
  * @author Gaston
  */
+
 @Data
 public class NoticiaDAO {
     private List<Noticia> noticias;
