@@ -1,0 +1,26 @@
+#if ($noticias.size() == 0)
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h5>No hay noticias</h5>
+        </div>
+    </div>
+#else
+    #foreach( $n in $noticias ) 
+
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <h3>$n.getTit()</h3>
+            </div>
+
+            <div class="col-8">
+                <img src="$n.getUrl()" class="img-fluid" alt="Responsive image">
+            </div>
+
+            <div class="col-8">
+                <h5>$n.getDesc()</h5>
+            </div>
+        </div>
+    
+    #end
+#end 
+
