@@ -1,12 +1,12 @@
 package com.mycompany.test_diario;
-import lombok.Data;
+
 
 /**
  *
  * @author Gaston
  */
 
-@Data
+
 public class Noticia {
     private String titulo;
     private String urlImg;

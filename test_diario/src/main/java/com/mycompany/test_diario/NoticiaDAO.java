@@ -1,15 +1,13 @@
 package com.mycompany.test_diario;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import lombok.Data;
 
 /**
  *
  * @author Gaston
  */
 
-@Data
+
 public class NoticiaDAO {
     private List<Noticia> noticias;
     
@@ -19,7 +17,7 @@ public class NoticiaDAO {
         }
     
     private void init(){
-        noticias = new ArrayList<Noticia>();
+        noticias = new ArrayList<>();
 
             Noticia n1 = new Noticia("Contagiados de covid lamentan estar contagiados","imagen01.jpg");
             n1.setDesc("Al parecer los contagiados sienten malestar y no les sienta agradable el echo de tener covid");

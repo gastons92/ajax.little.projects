@@ -1,5 +1,4 @@
 package com.mycompany.test_diario;
-import java.util.ArrayList;
 import java.util.List;
 import spark.Request;
 import spark.Response;
@@ -14,6 +13,7 @@ import spark.template.velocity.VelocityTemplateEngine;
  */
 
 public class Controlador {
+    
     public static Route index = (Request req, Response res) -> {
         HashMap model = new HashMap();
         
